@@ -1,9 +1,16 @@
-import "./header.style.css";
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
 
-export default function Header(){
-    return( 
-    <header className="page-header">
-        <h1>Lista de tareas</h1>
-    </header>
+export default function Header({pendingTasks}){
+    return(
+        <header>
+            <Container>
+                <Row>
+                    <Col><h1>Lista de tareas</h1></Col>
+                    <Col><h3>Tareas pendientes: {pendingTasks}</h3></Col>
+                </Row>
+            </Container>
+        </header>
     )
 }
